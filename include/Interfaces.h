@@ -4,7 +4,7 @@
 
 class WorkBaseTime {
  public:
-    virtual unsigned int calcBase(unsigned int _payment,
+    virtual unsigned int calcBase(unsigned int _salary,
                                   unsigned int _worktime) = 0;
     virtual unsigned int calcBonus() = 0;
 };

@@ -4,44 +4,51 @@
 
 #include <string>
 #include <iostream>
-#include "Factory.h"
 #include "Personal.h"
+#include "Interfaces.h"
 #include "Manager.h"
 
-class Engineer : public Personal, ProjectBudget {
+
+class Project;
+
+class Engineer : public Personal, public ProjectBudget {
  protected:
     Project* project;
 
  public:
     Engineer(unsigned int _id, std::string _name,
-           std::string _position, unsigned int _payment,
+           POSITION _position, unsigned int _salary,
            Project* _project);
     unsigned int calcBudgetPart(float _part,
                                 unsigned int _budget) override;
-    unsigned int calcBonus();
-    unsigned int calcProAdditions();
-    void printInfo();
+    void calc() override;
+    void printInfo() override;
 };
+
 
 class Programmer : public Engineer {
  public:
     Programmer(unsigned int _id, std::string _name,
-           std::string _position, unsigned int _payment,
+           POSITION _position, unsigned int _salary,
            Project* _project);
+    unsigned int calcProAdditions() override;
 };
 
 class Tester : public Engineer {
  public:
     Tester(unsigned int _id, std::string _name,
-           std::string _position, unsigned int _payment,
+           POSITION _position, unsigned int _salary,
            Project* _project);
+    unsigned int calcProAdditions() override;
 };
 
 class TeamLeader : public Programmer, public Heading {
  public:
     TeamLeader(unsigned int _id, std::string _name,
-           std::string _position, unsigned int _payment,
+           POSITION _position, unsigned int _salary,
            Project* _project);
+    void calc() override;
+    unsigned int calcHeads() override;
 };
 
 

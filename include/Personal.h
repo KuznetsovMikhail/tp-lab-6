@@ -5,7 +5,6 @@
 #include <string>
 #include <iostream>
 #include <cmath>
-#include "Factory.h"
 #include "Employee.h"
 #include "Interfaces.h"
 
@@ -15,10 +14,10 @@ class Personal : public Employee, public WorkBaseTime {
 
  public:
     Personal(unsigned int _id, std::string _name,
-             std::string _position, unsigned int _payment);
-    unsigned int calc() override;
-    unsigned int calcBase(unsigned int salary,
-                          unsigned int wtime) override;
+             POSITION _position, unsigned int _salary);
+    void calc() override;
+    unsigned int calcBase(unsigned int _salary,
+                          unsigned int _worktime) override;
     unsigned int calcBonus() override;
     void printInfo() override;
 };
@@ -26,14 +25,15 @@ class Personal : public Employee, public WorkBaseTime {
 class Driver : public Personal {
  public:
     Driver(unsigned int _id, std::string _name,
-          std::string _position, unsigned int _payment);
+          POSITION _position, unsigned int _salary);
     unsigned int calcBonus() override;
 };
 
 class Cleaner : public Personal {
  public:
-  Cleaner(unsigned int _id, std::string _name,
-          std::string _position, unsigned int _payment);
+    Cleaner(unsigned int _id, std::string _name,
+          POSITION _position, unsigned int _salary);
 };
+
 
 #endif // INCLUDE_PERSONAL_H

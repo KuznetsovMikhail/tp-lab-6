@@ -3,26 +3,39 @@
 #define INCLUDE_EMPLOYEE_H
 
 #include <string>
+enum POSITION {
+  SENIORMANAGER,
+  PROJECTMANAGER,
+  TEAMLEADER,
+  PROGRAMMER,
+  TESTER,
+  DRIVER,
+  CLEANER,
+  UNKNOWN
+};
 
 class Employee {
  protected:
     unsigned int id;
     std::string name;
-    std::string position;
+    POSITION position;
     unsigned int worktime;
     unsigned int payment;
 
  public:
     Employee(unsigned int _id, std::string _name,
-             std::string _position, unsigned int _payment);
+             POSITION _position);
     void setWorkTime(unsigned int _worktime);
     unsigned int getId();
     std::string getName();
-    std::string getPosition();
+    POSITION getPosition();
+    std::string stringPosition();
     unsigned int getWorktime();
     unsigned int getPayment();
-    virtual int calc() = 0;
+    virtual void calc() = 0;
     virtual void printInfo() = 0;
 };
+
+POSITION positionByString(std::string _stringPosition);
 
 #endif // INCLUDE_EMPLOYEE_H
