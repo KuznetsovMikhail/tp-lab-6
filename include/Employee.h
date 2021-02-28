@@ -19,7 +19,7 @@ class Employee {
     unsigned int id;
     std::string name;
     POSITION position;
-    unsigned int worktime;
+    unsigned int worktime = 0;
     unsigned int payment;
 
  public:
