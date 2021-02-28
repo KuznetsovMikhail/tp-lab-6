@@ -122,7 +122,7 @@ TEST(StaffDemoTest, test11) {
   POSITION position = TEAMLEADER;
   unsigned int salary = 20;
   TeamLeader employee(id, name, position, salary, project);
-  EXPECT_EQ((2 + 5) * 2, employee.calcHeads());
+  EXPECT_EQ((2 + 5) * 5, employee.calcHeads());
 }
 
 TEST(StaffDemoTest, test12) {
