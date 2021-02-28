@@ -8,15 +8,15 @@ Project::Project(unsigned int _id, unsigned int _budget)
 
 float Project::calcPart(POSITION _position) {
   unsigned int weightSum = 5 * testers
-  + 6 * programmers + 10 + 9 + 10;
-  //  10 - teamleader, 9 - projectmanager, 10 - seniormanager
+  + 6 * programmers + 10 + 18 + 20;
+  //  10 - teamleader, 18 - projectmanager, 20 - seniormanager
   float part;
   switch (_position) {
   case SENIORMANAGER:
-    part = static_cast<float> (10.0 / weightSum);
+    part = static_cast<float> (20.0 / weightSum);
     break;
   case PROJECTMANAGER:
-    part = static_cast<float> (9.0 / weightSum);
+    part = static_cast<float> (18.0 / weightSum);
     break;
   case TEAMLEADER:
     part = static_cast<float> (10.0 / weightSum);
@@ -52,7 +52,7 @@ unsigned int ProjectManager::calcHeads() {
   for (auto p : projects) {
     people += p->testers + p->programmers;
   }
-  return people * 3;
+  return people * 15;
 }
 
 unsigned int ProjectManager::calcBudgetPart(float _part,
@@ -63,7 +63,7 @@ unsigned int ProjectManager::calcBudgetPart(float _part,
 unsigned int ProjectManager::calcProAdditions() {
   unsigned int add = 0;
   for (auto p : projects)
-    add += calcBudgetPart(0.03, p->budget);
+    add += static_cast <unsigned int> (calcBudgetPart(0.07, p->budget));
   return add;
 }
 

@@ -69,7 +69,7 @@ TeamLeader::TeamLeader(unsigned int _id, std::string _name,
 unsigned int TeamLeader::calcHeads() {
   unsigned int people = 0;
   people += project->testers + project->programmers;
-  return people * 2;
+  return people * 5;
 }
 
 void TeamLeader::calc() {

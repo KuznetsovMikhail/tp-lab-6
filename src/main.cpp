@@ -16,13 +16,16 @@ int main() {
       e->setWorktime(std::rand() % 36 + 20);
       //  setting worktime in interval [20, 55]
     }
+
     for (auto e : staff) {
       e->calc();
       //  calculating income for every employee
     }
+
     for (auto e : staff) {
       e->printInfo();
       //  print information about employees
     }
+
     return 0;
 }
