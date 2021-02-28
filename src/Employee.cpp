@@ -8,7 +8,7 @@ Employee::Employee(unsigned int _id, std::string _name,
   position = _position;
 }
 
-void Employee::setWorkTime(unsigned int _worktime) {
+void Employee::setWorktime(unsigned int _worktime) {
   worktime = _worktime;
 }
 

@@ -13,7 +13,7 @@ int main() {
     std::vector<Employee*> staff =
     factory.makeStaff("../data/Projects.txt", "../data/Employees.txt");
     for (auto e : staff) {
-      e->setWorkTime(std::rand() % 36 + 20);
+      e->setWorktime(std::rand() % 36 + 20);
     }
     for (auto e : staff) {
       e->calc();

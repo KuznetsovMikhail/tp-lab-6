@@ -25,7 +25,7 @@ class Employee {
  public:
     Employee(unsigned int _id, std::string _name,
              POSITION _position);
-    void setWorkTime(unsigned int _worktime);
+    void setWorktime(unsigned int _worktime);
     unsigned int getId();
     std::string getName();
     POSITION getPosition();
