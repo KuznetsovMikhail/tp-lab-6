@@ -14,15 +14,15 @@ int main() {
     factory.makeStaff("../data/Projects.txt", "../data/Employees.txt");
     for (auto e : staff) {
       e->setWorktime(std::rand() % 36 + 20);
-      //  установка рабочего времени в промежутке [20, 55]
+      //  setting worktime in interval [20, 55]
     }
     for (auto e : staff) {
       e->calc();
-      //  вычисление дохода, заработанного сотрудниками
+      //  calculating income for every employee
     }
     for (auto e : staff) {
       e->printInfo();
-      //  вывод информации о сотрудниках
+      //  print information about employees
     }
     return 0;
 }
