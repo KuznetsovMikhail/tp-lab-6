@@ -62,7 +62,7 @@ TEST(StaffDemoTest, test6) {
   std::string name = "Jamie Colon";
   POSITION position = DRIVER;
   unsigned int salary = 10;
-  Cleaner employee(id, name, position, salary);
+  Driver employee(id, name, position, salary);
   employee.setWorktime(50);
   employee.calc();
   EXPECT_EQ(200, employee.calcBonus());
@@ -73,7 +73,7 @@ TEST(StaffDemoTest, test7) {
   std::string name = "Jamie Colon";
   POSITION position = DRIVER;
   unsigned int salary = 10;
-  Cleaner employee(id, name, position, salary);
+  Driver employee(id, name, position, salary);
   employee.setWorktime(50);
   employee.calc();
   EXPECT_EQ(600, employee.getPayment());
@@ -84,7 +84,7 @@ TEST(StaffDemoTest, test8) {
   std::string name = "Greg Lynch";
   POSITION position = DRIVER;
   unsigned int salary = 8;
-  Cleaner employee(id, name, position, salary);
+  Driver employee(id, name, position, salary);
   employee.setWorktime(35);
   employee.calc();
   EXPECT_EQ(0, employee.calcBonus());
@@ -131,7 +131,7 @@ TEST(StaffDemoTest, test12) {
   std::string name = "Charles Smith";
   POSITION position = TESTER;
   unsigned int salary = 20;
-  TeamLeader employee(id, name, position, salary, project);
+  Tester employee(id, name, position, salary, project);
   EXPECT_EQ(20, employee.calcBudgetPart(0.2, 100));
 }
 
@@ -155,7 +155,7 @@ TEST(StaffDemoTest, test14) {
   unsigned int id = 2011;
   std::string name = "Robert Hayes";
   POSITION position = PROJECTMANAGER;
-  SeniorManager employee(id, name, position, projects);
+  ProjectManager employee(id, name, position, projects);
   EXPECT_EQ(PROJECTMANAGER, employee.getPosition());
 }
 
@@ -166,7 +166,7 @@ TEST(StaffDemoTest, test15) {
   unsigned int id = 2011;
   std::string name = "Robert Hayes";
   POSITION position = PROJECTMANAGER;
-  SeniorManager employee(id, name, position, projects);
+  ProjectManager employee(id, name, position, projects);
   employee.setWorktime(50);
   EXPECT_EQ(50, employee.getWorktime());
 }
@@ -177,7 +177,7 @@ TEST(StaffDemoTest, test16) {
   std::string name = "Sergio Rodriguez";
   POSITION position = TESTER;
   unsigned int salary = 20;
-  TeamLeader employee(id, name, position, salary, project);
+  Tester employee(id, name, position, salary, project);
   employee.setWorktime(45);
   EXPECT_EQ(900, employee.calcBase(salary, employee.getWorktime()));
 }
@@ -189,7 +189,7 @@ TEST(StaffDemoTest, test17) {
   std::string name = "Kevin Walsh";
   POSITION position = PROGRAMMER;
   unsigned int salary = 20;
-  TeamLeader employee(id, name, position, salary, project);
+  Programmer employee(id, name, position, salary, project);
   employee.setWorktime(45);
   EXPECT_EQ(10, employee.calcProAdditions());
 }
@@ -201,7 +201,7 @@ TEST(StaffDemoTest, test18) {
   std::string name = "Daniel Fuller";
   POSITION position = TESTER;
   unsigned int salary = 15;
-  TeamLeader employee(id, name, position, salary, project);
+  Tester employee(id, name, position, salary, project);
   employee.setWorktime(45);
   EXPECT_EQ(25, employee.calcProAdditions());
 }
