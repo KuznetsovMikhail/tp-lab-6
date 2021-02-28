@@ -27,19 +27,19 @@ POSITION Employee::getPosition() {
 std::string Employee::stringPosition() {
   std::string positionToString;
   switch (position) {
-	case SENIORMANAGER:
+  case SENIORMANAGER:
   positionToString = "Senior manager";
   break;
-	case PROJECTMANAGER:
+  case PROJECTMANAGER:
   positionToString = "Project manager";
   break;
-	case TEAMLEADER:
+  case TEAMLEADER:
   positionToString = "Team leader";
   break;
-	case PROGRAMMER:
+  case PROGRAMMER:
   positionToString = "Programmer";
   break;
-	case TESTER:
+  case TESTER:
   positionToString = "Tester";
   break;
   case DRIVER:
@@ -48,7 +48,7 @@ std::string Employee::stringPosition() {
   case CLEANER:
   positionToString = "Cleaner";
   break;
-	default:
+  default:
   positionToString = "Unknown";
   break;
 	}
@@ -61,23 +61,23 @@ POSITION positionByString(std::string _stringPosition) {
     _stringPosition.pop_back();
   }
   if (_stringPosition == "Senior manager") {
-		result = POSITION::SENIORMANAGER;
-	} else if (_stringPosition == "Project manager") {
+    result = POSITION::SENIORMANAGER;
+  } else if (_stringPosition == "Project manager") {
     result = PROJECTMANAGER;
-	} else if (_stringPosition == "Team leader") {
-		result = TEAMLEADER;
-	} else if (_stringPosition == "Programmer") {
+  } else if (_stringPosition == "Team leader") {
+    result = TEAMLEADER;
+  } else if (_stringPosition == "Programmer") {
     result = PROGRAMMER;
-	} else if (_stringPosition == "Tester") {
-	  result = TESTER;
-	} else if (_stringPosition == "Driver") {
+  } else if (_stringPosition == "Tester") {
+    result = TESTER;
+  } else if (_stringPosition == "Driver") {
     result = DRIVER;
-	} else if (_stringPosition == "Cleaner") {
+  } else if (_stringPosition == "Cleaner") {
     result = CLEANER;
-	} else {
-	  result = UNKNOWN;
-	}
-	return result;
+  } else {
+    result = UNKNOWN;
+  }
+  return result;
 }
 
 unsigned int Employee::getWorktime() {

@@ -59,27 +59,34 @@ std::vector<Employee *> StaffFactory::makeStaff(std::string _projectsFile, std::
       }
     }
     if (position == SENIORMANAGER) {
-      SeniorManager* employee = new SeniorManager(id, name, position, projects);
+      SeniorManager* employee = new SeniorManager(id, name,
+                                                  position, projects);
       staff.push_back(employee);
     } else if (position == PROJECTMANAGER) {
-      ProjectManager* employee = new ProjectManager(id, name, position, projects);
+      ProjectManager* employee = new ProjectManager(id, name,
+                                                    position, projects);
       staff.push_back(employee);
     } else if (position == TEAMLEADER) {
-      TeamLeader* employee = new TeamLeader(id, name, position, salary, project);
+      TeamLeader* employee = new TeamLeader(id, name,
+                                            position, salary, project);
       staff.push_back(employee);
     } else if (position == PROGRAMMER) {
-      Programmer* employee = new Programmer(id, name, position, salary, project);
+      Programmer* employee = new Programmer(id, name,
+                                            position, salary, project);
       staff.push_back(employee);
       project->programmers++;
     } else if (position == TESTER) {
-      Tester* employee = new Tester(id, name, position, salary, project);
+      Tester* employee = new Tester(id, name,
+                                    position, salary, project);
       staff.push_back(employee);
       project->testers++;
     } else if (position == DRIVER) {
-      Driver* employee = new Driver(id, name, position, salary);
+      Driver* employee = new Driver(id, name,
+                                    position, salary);
       staff.push_back(employee);
     } else if (position == CLEANER) {
-      Cleaner* employee = new Cleaner(id, name, position, salary);
+      Cleaner* employee = new Cleaner(id, name,
+                                      position, salary);
       staff.push_back(employee);
     }
   }

@@ -12,7 +12,8 @@
 
 class StaffFactory {
  public:
-    std::vector<Employee*> makeStaff(std::string _projectsFile, std::string _employeesFile);
+    std::vector<Employee*> makeStaff(std::string _projectsFile,
+                                     std::string _employeesFile);
 };
 
-#endif //  INCLUDE_FACTORY_H_
+#endif  //  INCLUDE_FACTORY_H_

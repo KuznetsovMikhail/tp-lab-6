@@ -52,4 +52,4 @@ class TeamLeader : public Programmer, public Heading {
 };
 
 
-#endif //  INCLUDE_ENGINEER_H_
+#endif  //  INCLUDE_ENGINEER_H_

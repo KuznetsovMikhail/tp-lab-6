@@ -38,4 +38,4 @@ class Employee {
 
 POSITION positionByString(std::string _stringPosition);
 
-#endif //  INCLUDE_EMPLOYEE_H_
+#endif  // INCLUDE_EMPLOYEE_H_

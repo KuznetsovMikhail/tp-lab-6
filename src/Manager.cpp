@@ -12,25 +12,25 @@ float Project::calcPart(POSITION _position) {
   //  10 - teamleader, 9 - projectmanager, 10 - seniormanager
   float part;
   switch (_position) {
-	case SENIORMANAGER:
-		part = static_cast<float> (12.0 / weightSum);
-		break;
-	case PROJECTMANAGER:
-		part = static_cast<float> (9.0 / weightSum);
-		break;
-	case TEAMLEADER:
-		part = static_cast<float> (10.0 / weightSum);
-		break;
-	case PROGRAMMER:
-		part = static_cast<float> (6.0 / weightSum);
-		break;
-	case TESTER:
-		part = static_cast<float> (5.0 / weightSum);
-		break;
-	default:
-		part = 0;
-		break;
-	}
+  case SENIORMANAGER:
+    part = static_cast<float> (12.0 / weightSum);
+    break;
+  case PROJECTMANAGER:
+    part = static_cast<float> (9.0 / weightSum);
+    break;
+  case TEAMLEADER:
+    part = static_cast<float> (10.0 / weightSum);
+    break;
+  case PROGRAMMER:
+    part = static_cast<float> (6.0 / weightSum);
+    break;
+  case TESTER:
+    part = static_cast<float> (5.0 / weightSum);
+    break;
+  default:
+    part = 0;
+    break;
+  }
 	return part * 0.8;
 }
 

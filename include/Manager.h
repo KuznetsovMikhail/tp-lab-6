@@ -39,4 +39,4 @@ class SeniorManager : public ProjectManager {
                   POSITION _position, std::vector<Project*> _projects);
 };
 
-#endif //  INCLUDE_MANAGER_H_
+#endif  //  INCLUDE_MANAGER_H_
