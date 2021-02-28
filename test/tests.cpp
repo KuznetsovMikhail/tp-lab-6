@@ -150,7 +150,7 @@ TEST(StaffDemoTest, test13) {
 
 TEST(StaffDemoTest, test14) {
   std::vector <Project*> projects;
-  Project* project = new Project(i, i * 100);
+  Project* project = new Project(4, 400);
   projects.push_back(project);
   unsigned int id = 2011;
   std::string name = "Robert Hayes";
@@ -179,7 +179,7 @@ TEST(StaffDemoTest, test16) {
   unsigned int salary = 20;
   TeamLeader employee(id, name, position, salary, project);
   employee.setWorktime(45);
-  EXPECT_EQ(900, employee.calcBase());
+  EXPECT_EQ(900, employee.calcBase(salary, employee.getWorktime()));
 }
 
 TEST(StaffDemoTest, test17) {
