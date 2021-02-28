@@ -1,6 +1,6 @@
 // Copyright 2021 Kuznetsov Mikhail
-#ifndef INCLUDE_FACTORY_H
-#define INCLUDE_FACTORY_H
+#ifndef INCLUDE_FACTORY_H_
+#define INCLUDE_FACTORY_H_
 
 #include <string>
 #include <vector>
@@ -15,4 +15,4 @@ class StaffFactory {
     std::vector<Employee*> makeStaff(std::string _projectsFile, std::string _employeesFile);
 };
 
-#endif // INCLUDE_FACTORY_H
+#endif //  INCLUDE_FACTORY_H_

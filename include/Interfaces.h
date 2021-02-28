@@ -1,6 +1,6 @@
 // Copyright 2021 Kuznetsov Mikhail
-#ifndef INCLUDE_INTERFACES_H
-#define INCLUDE_INTERFACES_H
+#ifndef INCLUDE_INTERFACES_H_
+#define INCLUDE_INTERFACES_H_
 
 class WorkBaseTime {
  public:
@@ -21,4 +21,4 @@ class Heading {
     virtual unsigned int calcHeads() = 0;
 };
 
-#endif // INCLUDE_INTERFACES_H
+#endif //  INCLUDE_INTERFACES_H_

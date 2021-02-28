@@ -1,6 +1,6 @@
 // Copyright 2021 Kuznetsov Mikhail
-#ifndef INCLUDE_ENGINEER_H
-#define INCLUDE_ENGINEER_H
+#ifndef INCLUDE_ENGINEER_H_
+#define INCLUDE_ENGINEER_H_
 
 #include <string>
 #include <iostream>
@@ -52,4 +52,4 @@ class TeamLeader : public Programmer, public Heading {
 };
 
 
-#endif // INCLUDE_ENGINEER_H
+#endif //  INCLUDE_ENGINEER_H_

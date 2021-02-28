@@ -8,10 +8,10 @@ Project::Project(unsigned int _id, unsigned int _budget)
 
 float Project::calcPart(POSITION _position) {
   unsigned int weightSum = 5 * testers
-  + 6 * programmers + 10 + 9 + 10; // 10 - teamleader, 9 - projectmanager, 10 - seniormanager
+  + 6 * programmers + 10 + 9 + 10;
+  //  10 - teamleader, 9 - projectmanager, 10 - seniormanager
   float part;
-  switch (_position)
-	{
+  switch (_position) {
 	case SENIORMANAGER:
 		part = static_cast<float> (12.0 / weightSum);
 		break;

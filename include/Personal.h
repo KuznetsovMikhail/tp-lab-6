@@ -1,6 +1,6 @@
 // Copyright 2021 Kuznetsov Mikhail
-#ifndef INCLUDE_PERSONAL_H
-#define INCLUDE_PERSONAL_H
+#ifndef INCLUDE_PERSONAL_H_
+#define INCLUDE_PERSONAL_H_
 
 #include <string>
 #include <iostream>
@@ -36,4 +36,4 @@ class Cleaner : public Personal {
 };
 
 
-#endif // INCLUDE_PERSONAL_H
+#endif //  INCLUDE_PERSONAL_H_

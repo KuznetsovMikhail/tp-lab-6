@@ -1,6 +1,6 @@
 // Copyright 2021 Kuznetsov Mikhail
-#ifndef INCLUDE_EMPLOYEE_H
-#define INCLUDE_EMPLOYEE_H
+#ifndef INCLUDE_EMPLOYEE_H_
+#define INCLUDE_EMPLOYEE_H_
 
 #include <string>
 enum POSITION {
@@ -38,4 +38,4 @@ class Employee {
 
 POSITION positionByString(std::string _stringPosition);
 
-#endif // INCLUDE_EMPLOYEE_H
+#endif //  INCLUDE_EMPLOYEE_H_

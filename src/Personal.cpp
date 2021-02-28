@@ -3,8 +3,7 @@
 
 Personal::Personal(unsigned int _id, std::string _name,
              POSITION _position, unsigned int _salary)
-    : Employee (_id, _name,
-                _position), salary(_salary) {
+  : Employee(_id, _name, _position), salary(_salary) {
 }
 
 void Personal::calc() {

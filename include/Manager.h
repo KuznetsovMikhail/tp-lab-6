@@ -1,6 +1,6 @@
 // Copyright 2021 Kuznetsov Mikhail
-#ifndef INCLUDE_MANAGER_H
-#define INCLUDE_MANAGER_H
+#ifndef INCLUDE_MANAGER_H_
+#define INCLUDE_MANAGER_H_
 
 #include <string>
 #include <vector>
@@ -39,4 +39,4 @@ class SeniorManager : public ProjectManager {
                   POSITION _position, std::vector<Project*> _projects);
 };
 
-#endif // INCLUDE_MANAGER_H
+#endif //  INCLUDE_MANAGER_H_
