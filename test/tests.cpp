@@ -191,7 +191,8 @@ TEST(StaffDemoTest, test17) {
   unsigned int salary = 20;
   Programmer employee(id, name, position, salary, project);
   employee.setWorktime(45);
-  unsigned int result = static_cast<unsigned int> Project->budget * (45 - 40) * 0.002;
+  unsigned int result =
+  static_cast<unsigned int> Project->budget * (45 - 40) * 0.002;
   EXPECT_EQ(result, employee.calcProAdditions());
 }
 
