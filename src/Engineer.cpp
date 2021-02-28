@@ -5,8 +5,7 @@
 Engineer::Engineer(unsigned int _id, std::string _name,
                    POSITION _position, unsigned int _salary,
                    Project* _project)
-  : Personal(_id, _name, _position, _salary),
-  project(_project){
+  : Personal(_id, _name, _position, _salary), project(_project) {
 }
 
 void Engineer::calc() {

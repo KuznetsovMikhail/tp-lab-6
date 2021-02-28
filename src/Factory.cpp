@@ -3,7 +3,8 @@
 #include "Factory.h"
 
 
-std::vector<Employee *> StaffFactory::makeStaff(std::string _projectsFile, std::string _employeesFile) {
+std::vector<Employee *> StaffFactory::makeStaff(std::string _projectsFile,
+                                                std::string _employeesFile) {
   std::ifstream fproj(_projectsFile);
   std::vector <Project*> companyProjects;
   std::string input;

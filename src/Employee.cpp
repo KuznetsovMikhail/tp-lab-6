@@ -28,31 +28,31 @@ std::string Employee::stringPosition() {
   std::string positionToString;
   switch (position) {
   case SENIORMANAGER:
-  positionToString = "Senior manager";
-  break;
+    positionToString = "Senior manager";
+    break;
   case PROJECTMANAGER:
-  positionToString = "Project manager";
-  break;
+    positionToString = "Project manager";
+    break;
   case TEAMLEADER:
-  positionToString = "Team leader";
-  break;
+    positionToString = "Team leader";
+    break;
   case PROGRAMMER:
-  positionToString = "Programmer";
-  break;
+    positionToString = "Programmer";
+    break;
   case TESTER:
-  positionToString = "Tester";
-  break;
+    positionToString = "Tester";
+    break;
   case DRIVER:
-  positionToString = "Driver";
-  break;
+    positionToString = "Driver";
+    break;
   case CLEANER:
-  positionToString = "Cleaner";
-  break;
+    positionToString = "Cleaner";
+    break;
   default:
-  positionToString = "Unknown";
-  break;
-	}
-	return positionToString;
+    positionToString = "Unknown";
+    break;
+  }
+  return positionToString;
 }
 
 POSITION positionByString(std::string _stringPosition) {

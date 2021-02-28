@@ -31,7 +31,7 @@ float Project::calcPart(POSITION _position) {
     part = 0;
     break;
   }
-	return part * 0.8;
+  return part * 0.8;
 }
 
 ProjectManager::ProjectManager(unsigned int _id, std::string _name,
