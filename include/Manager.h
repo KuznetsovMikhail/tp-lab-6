@@ -31,6 +31,7 @@ public Heading, public ProjectBudget {
     unsigned int calcProAdditions() override;
     unsigned int calcHeads() override;
     void printInfo() override;
+    std::vector<Project*> getProjects();
 };
 
 class SeniorManager : public ProjectManager {

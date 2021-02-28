@@ -27,6 +27,10 @@ void Engineer::printInfo() {
   << "\n-----------------Employee card-----------------\n";
 }
 
+Project* Engineer::getProject() {
+  return project;
+}
+
 Tester::Tester(unsigned int _id, std::string _name,
            POSITION _position, unsigned int _salary,
            Project* _project)
@@ -65,7 +69,7 @@ TeamLeader::TeamLeader(unsigned int _id, std::string _name,
 unsigned int TeamLeader::calcHeads() {
   unsigned int people = 0;
   people += project->testers + project->programmers;
-  return people * 35;
+  return people * 2;
 }
 
 void TeamLeader::calc() {

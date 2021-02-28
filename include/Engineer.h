@@ -23,6 +23,7 @@ class Engineer : public Personal, public ProjectBudget {
                                 unsigned int _budget) override;
     void calc() override;
     void printInfo() override;
+    Project* getProject();
 };
 
 

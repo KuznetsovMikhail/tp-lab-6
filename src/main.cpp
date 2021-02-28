@@ -1,14 +1,12 @@
 // Copyright 2021 Kuznetsov Mikhail
 
-#include <iostream>
-#include <string>
-#include <algorithm>
+#include <vector>
 #include <random>
 #include "Employee.h"
-#include "Manager.h"
-#include "Personal.h"
 #include "Engineer.h"
 #include "Factory.h"
+#include "Manager.h"
+#include "Personal.h"
 
 int main() {
     StaffFactory factory;

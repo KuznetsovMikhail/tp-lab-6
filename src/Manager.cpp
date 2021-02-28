@@ -13,7 +13,7 @@ float Project::calcPart(POSITION _position) {
   float part;
   switch (_position) {
   case SENIORMANAGER:
-    part = static_cast<float> (12.0 / weightSum);
+    part = static_cast<float> (10.0 / weightSum);
     break;
   case PROJECTMANAGER:
     part = static_cast<float> (9.0 / weightSum);
@@ -52,7 +52,7 @@ unsigned int ProjectManager::calcHeads() {
   for (auto p : projects) {
     people += p->testers + p->programmers;
   }
-  return people * 45;
+  return people * 3;
 }
 
 unsigned int ProjectManager::calcBudgetPart(float _part,
@@ -63,8 +63,12 @@ unsigned int ProjectManager::calcBudgetPart(float _part,
 unsigned int ProjectManager::calcProAdditions() {
   unsigned int add = 0;
   for (auto p : projects)
-    add += calcBudgetPart(0.3, p->budget);
+    add += calcBudgetPart(0.03, p->budget);
   return add;
+}
+
+std::vector<Project*> ProjectManager::getProjects() {
+  return projects;
 }
 
 SeniorManager::SeniorManager(unsigned int _id, std::string _name,
@@ -77,7 +81,10 @@ void ProjectManager::printInfo() {
   std::cout << "-----------------Employee card-----------------\n"
   << "id: " << id << "\nname: " << name
   << "\nposition: " << stringPosition() << "\nworktime: " << worktime
-  << "\npayment: " << payment
-  << "\n-----------------Employee card-----------------\n";
+  << "\npayment: " << payment << "\nprojects: ";
+  for (auto p : projects)  {
+    std::cout << p->id << " ";
+  }
+  std::cout << "\n-----------------Employee card-----------------\n";
 }
 

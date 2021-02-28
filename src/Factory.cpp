@@ -57,6 +57,8 @@ std::vector<Employee *> StaffFactory::makeStaff(std::string _projectsFile,
             projects.push_back(p);
           }
         }
+        input = input.substr(pos + 1, input.size() - pos - 1);
+        pos = input.find(':');
       }
     }
     if (position == SENIORMANAGER) {
