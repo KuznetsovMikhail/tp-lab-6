@@ -76,7 +76,7 @@ TEST(StaffDemoTest, test7) {
   Driver employee(id, name, position, salary);
   employee.setWorktime(50);
   employee.calc();
-  EXPECT_EQ(50 * 10 + (50 - 40) * 2, employee.getPayment());
+  EXPECT_EQ(50 * 10 + (50 - 40) * 2 * 10, employee.getPayment());
 }
 
 TEST(StaffDemoTest, test8) {
