@@ -76,7 +76,7 @@ TEST(StaffDemoTest, test7) {
   Driver employee(id, name, position, salary);
   employee.setWorktime(50);
   employee.calc();
-  EXPECT_EQ(600, employee.getPayment());
+  EXPECT_EQ(50 * 10 + (50 - 40) * 2, employee.getPayment());
 }
 
 TEST(StaffDemoTest, test8) {
@@ -122,7 +122,7 @@ TEST(StaffDemoTest, test11) {
   POSITION position = TEAMLEADER;
   unsigned int salary = 20;
   TeamLeader employee(id, name, position, salary, project);
-  EXPECT_EQ(14, employee.calcHeads());
+  EXPECT_EQ((2 + 5) * 2, employee.calcHeads());
 }
 
 TEST(StaffDemoTest, test12) {
@@ -179,7 +179,7 @@ TEST(StaffDemoTest, test16) {
   unsigned int salary = 20;
   Tester employee(id, name, position, salary, project);
   employee.setWorktime(45);
-  EXPECT_EQ(900, employee.calcBase(salary, employee.getWorktime()));
+  EXPECT_EQ(20 * 45, employee.calcBase(salary, employee.getWorktime()));
 }
 
 TEST(StaffDemoTest, test17) {
@@ -191,7 +191,8 @@ TEST(StaffDemoTest, test17) {
   unsigned int salary = 20;
   Programmer employee(id, name, position, salary, project);
   employee.setWorktime(45);
-  EXPECT_EQ(10, employee.calcProAdditions());
+  unsigned int result = static_cast<unsigned int> Project->budget * (45 - 40) * 0.002;
+  EXPECT_EQ(result, employee.calcProAdditions());
 }
 
 TEST(StaffDemoTest, test18) {
@@ -203,5 +204,6 @@ TEST(StaffDemoTest, test18) {
   unsigned int salary = 15;
   Tester employee(id, name, position, salary, project);
   employee.setWorktime(45);
-  EXPECT_EQ(25, employee.calcProAdditions());
+  unsigned int result = static_cast<unsigned int> Project->budget * 0.005;
+  EXPECT_EQ(result, employee.calcProAdditions());
 }
