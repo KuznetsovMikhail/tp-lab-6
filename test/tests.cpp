@@ -161,7 +161,7 @@ TEST(StaffDemoTest, test14) {
 
 TEST(StaffDemoTest, test15) {
   std::vector <Project*> projects;
-  Project* project = new Project(i, i * 100);
+  Project* project = new Project(3, 300);
   projects.push_back(project);
   unsigned int id = 2011;
   std::string name = "Robert Hayes";
