@@ -10,7 +10,7 @@
 
 TEST(EmployeesTest, test1) {
     Project* project = new Project(1, 10000, 0);
-    Programmer employee(111, "TestName", 
+    Programmer employee(111, "TestName",
         Position::PROGRAMMER, 10000, project, 0.1);
     employee.SetWorkTime(1);
     employee.Calc();
