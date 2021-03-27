@@ -66,7 +66,8 @@ std::vector<Employee*> StaffFactory::ReadEmployees() {
             for (auto p : projects) {
                 if (p->id == project_id) {
                     ProjectManager* employee = new ProjectManager(id,
-                        surname + " " + name, Position::PROJECTMANAGER, p, part);
+                        surname + " " + name,
+                            Position::PROJECTMANAGER, p, part);
                     emp.push_back(employee);
                 }
             }
