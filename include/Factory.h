@@ -1,4 +1,4 @@
-// Copyright 2021 asma
+// Copyright 2021 asmatveev
 #pragma once
 #ifndef FACTORY_H_
 #define FACTORY_H_
