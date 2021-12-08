@@ -1,7 +1,14 @@
 
 # Lab-6
 
-## Лабораторный пректикум №6 (StaffDemo)
+## Лабораторный практикум №6 (StaffDemo)
+
+![GitHub pull requests](https://img.shields.io/github/issues-pr/HSE-CS/tp-lab-6)
+![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/HSE-CS/tp-lab-6)
+
+![Relative date](https://img.shields.io/date/1615150799)
+
+
 
 Разработать иерархию классов в соответствии со следующей диаграммой:
 
@@ -99,6 +106,9 @@ for(Employee emp: staff) {
 - Factory.cpp
 - main.cpp
 
+### Модульные тесты
+
+Как обычно, в файле **tests.cpp** добавляем модульные тесты в количестве не менее 15 штук.
  
 ## Список участников/веток
 
